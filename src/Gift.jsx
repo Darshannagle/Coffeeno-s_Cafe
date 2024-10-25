@@ -5,7 +5,6 @@ import {
   CardActionArea,
   CardActions,
   CardContent,
-  Grid,
   List,
   Typography,
 } from "@mui/material";
@@ -135,27 +134,41 @@ const Gift = () => {
                     backgroundColor: "rgba(255, 141, 77, 1)",
                   }}
                 >
-                  <CardContent sx={{  display: "flex", flexDirection: "column", justifyContent: "end", alignItems: "start" }}>
-                    <Box sx={{ display: "flex", flexDirection: "row",justifyContent: "start", alignItems: "center" }}>
-
-                    <img
-                      src={giftCard.img}
-                      alt={giftCard.title}
-                      style={{margin: "10px",
-                        width: "20%",
-                        height: "10%",
-                        objectFit: "cover",
+                  <CardContent
+                    sx={{
+                      display: "flex",
+                      flexDirection: "column",
+                      justifyContent: "end",
+                      alignItems: "start",
+                    }}
+                  >
+                    <Box
+                      sx={{
+                        display: "flex",
+                        flexDirection: "row",
+                        justifyContent: "start",
+                        alignItems: "center",
                       }}
+                    >
+                      <img
+                        src={giftCard.img}
+                        alt={giftCard.title}
+                        style={{
+                          margin: "10px",
+                          width: "20%",
+                          height: "10%",
+                          objectFit: "cover",
+                        }}
                       />
 
-                    <Typography
-                      sx={{ fontSize: 14,margin: "10px" }}
-                      color="text.secondary"
-                      gutterBottom
+                      <Typography
+                        sx={{ fontSize: 14, margin: "10px" }}
+                        color="text.secondary"
+                        gutterBottom
                       >
-                      {giftCard.title}
-                    </Typography>
-                      </Box>
+                        {giftCard.title}
+                      </Typography>
+                    </Box>
                     <Typography
                       sx={{ fontSize: 14 }}
                       color="text.secondary"
@@ -163,10 +176,9 @@ const Gift = () => {
                     >
                       {giftCard.description}
                     </Typography>
-                  
                   </CardContent>
-                  
-                  <CardActionArea sx={{marginBottom: "0px"}}>
+
+                  <CardActionArea sx={{ marginBottom: "0px" }}>
                     <CardActions
                       sx={{
                         display: "flex",
